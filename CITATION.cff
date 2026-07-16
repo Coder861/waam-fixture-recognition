@@ -1,0 +1,31 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite the version archived with this release."
+type: software
+title: "Vision-based fixture recognition for WAAM substrate plates"
+authors:
+  - given-names: Tomek
+    family-names: Poll
+    orcid: "https://orcid.org/0009-0003-4992-9830"
+    affiliation: "Hochschule Ruhr West"
+abstract: >-
+  A camera-based system for supporting the setup process of a wire arc
+  additive manufacturing cell. The software references a monocular camera
+  using ChArUco fiducials, transforms image coordinates into work-object
+  coordinates, supports assisted definition of the usable welding area,
+  detects marked clamping elements, and transfers the resulting geometry
+  to Rhino for CAD/CAM planning.
+keywords:
+  - WAAM
+  - computer vision
+  - camera calibration
+  - ChArUco
+  - ArUco
+  - workpiece localization
+  - CAD/CAM
+repository-code: "https://github.com/Coder861/waam-fixture-recognition"
+license: GPL-3.0-only
+version: "1.0.0"
+
+# Add these fields after the GitHub release has been archived by Zenodo:
+# date-released: "YYYY-MM-DD"
+# doi: "10.5281/zenodo.XXXXXXX"

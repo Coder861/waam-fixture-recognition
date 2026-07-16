@@ -1,0 +1,8 @@
+numpy==2.4.2
+opencv-contrib-python==4.13.0.92
+matplotlib==3.10.8
+Pillow==12.1.1
+pygrabber==0.2
+comtypes==1.4.16
+sv-ttk==2.6.1
+darkdetect==0.8.0
