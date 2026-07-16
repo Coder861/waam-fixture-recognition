@@ -44,8 +44,8 @@ Rhino, ModuleWorks und weitere kommerzielle CAM-Komponenten sind nicht Bestandte
 Repository klonen und Installationsskript ausführen:
 
 ```bat
-git clone https://github.com/Coder861/WAAM-Plattenerkennung.git
-cd WAAM-Plattenerkennung
+git clone https://github.com/Coder861/waam-fixture-recognition.git
+cd waam-fixture-recognition
 install_requirements.bat
 ```
 
@@ -72,7 +72,7 @@ python -m venv .venv
 `rhinoWAAMContour.py` im Rhino ScriptEditor öffnen oder folgenden Befehl einer Rhino-Schaltfläche beziehungsweise einem Alias zuweisen:
 
 ```text
-! _-ScriptEditor _Run "C:\Pfad\zu\WAAM-Plattenerkennung\rhinoWAAMContour.py"
+! _-ScriptEditor _Run "C:\path\to\waam-fixture-recognition\rhinoWAAMContour.py"
 ```
 
 Das Rhino-Skript startet die externe Vision-GUI mit der lokalen virtuellen Umgebung. Nach dem Export liest Rhino die Datei `data.json` ein und erzeugt die Geometrien der Substratplatte und der erkannten Spanneisen.
