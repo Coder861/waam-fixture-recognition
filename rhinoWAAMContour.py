@@ -96,7 +96,7 @@ CLAMP_CONTOURS = {
     62: make_clamp_definition("Spanneisen_14x160", POLY_SPANNEISEN_14x160_NORM, 180.0),
 }
 
-DEFAULT_CLAMP_CONTOUR = make_clamp_definition("Spanneisen_default", POLY_SPANNEISEN_14x125_NORM)
+# DEFAULT_CLAMP_CONTOUR = make_clamp_definition("Spanneisen_default", POLY_SPANNEISEN_14x125_NORM)
 
 def start_process(form, status_label):
     global external_process
@@ -199,6 +199,12 @@ def createRhinoGeometry(form, status_label):
 
     polygon_data = data["weldable_polygon"]
     clamp_data = data.get("spanneisen_positions", [])
+    clamp_extrusion_height_mm = float(
+        data.get(
+            "clamp_extrusion_height_mm",
+            CLAMP_EXTRUSION_HEIGHT_MM
+        )
+    )
 
     # Schweißplattenpolygon aus JSON aufbauen
     weldplate_points3d = []
@@ -238,10 +244,13 @@ def createRhinoGeometry(form, status_label):
         aruco_id = int(clamp["aruco_id"])
 
         # Holt die Standardkontur des jeweiligen Spanneisens aus der Lookuptabelle
-        clamp_def = CLAMP_CONTOURS.get(
-            aruco_id,
-            DEFAULT_CLAMP_CONTOUR
-        )
+        clamp_def = CLAMP_CONTOURS.get(aruco_id)
+
+        if clamp_def is None:
+            print(
+                "Spanneisen übersprungen: "
+                "keine Geometrie für ArUco ID " + str(aruco_id)
+            )
 
         # Wo der Mittelpunkt des Markers liegt
         center_x_mm = m_to_mm(clamp["X"])
@@ -261,7 +270,7 @@ def createRhinoGeometry(form, status_label):
 
         clamp_solid_id = add_extruded_polygon(
             clamp_points3d,
-            CLAMP_EXTRUSION_HEIGHT_MM
+            clamp_extrusion_height_mm
         )
         # Gibt dem erstellen Volumenkörper einen Namen, der das Spanneisen beschreibt
         if clamp_solid_id:

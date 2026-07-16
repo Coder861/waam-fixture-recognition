@@ -121,10 +121,10 @@ CLAMP_POLYGON_LUT = {
     62: {"poly_norm": POLY_SPANNEISEN_14x160_NORM, "angle_offset_deg": 180.0},
 }
 
-DEFAULT_CLAMP_POLYGON = {
-    "poly_norm": POLY_SPANNEISEN_14x125_NORM,
-    "angle_offset_deg": 180.0
-}
+#DEFAULT_CLAMP_POLYGON = {
+    #"poly_norm": POLY_SPANNEISEN_14x125_NORM,
+    #"angle_offset_deg": 180.0
+#}
 
 
 ## ChArUco - Werkobjekt Koordinatensystemoffset
@@ -232,6 +232,15 @@ def detect_aruco(charuco_frame, valid_mask=None):
     accepted_ids = []
 
     for i, marker_id in enumerate(aruco_ids.flatten()):
+        marker_id = int(marker_id)
+
+        if marker_id not in CLAMP_POLYGON_LUT:
+            print(
+                f"ArUco ID {marker_id} verworfen: "
+                "keine Spanneisengeometrie hinterlegt."
+            )
+            continue
+        
         corners = aruco_corners[i].reshape(4, 2)
 
         # Mittelpunkt des Markers im Bild
@@ -584,7 +593,13 @@ def createSpanneisenMask(frame_shape):
 
     for clamp in spanneisen_positions:
         aruco_id = int(clamp["aruco_id"])
-        clamp_def = CLAMP_POLYGON_LUT.get(aruco_id, DEFAULT_CLAMP_POLYGON)
+        clamp_def = CLAMP_POLYGON_LUT.get(aruco_id)
+
+        if clamp_def is None: 
+            print(
+                f"Spanneisenmaske übersprungen: "
+                f"unbekannte ArUco ID {aruco_id}"
+            )
 
         poly_norm = clamp_def["poly_norm"]
         angle_deg = float(clamp["angle_z_deg"]) + float(clamp_def["angle_offset_deg"])
