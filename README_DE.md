@@ -7,7 +7,7 @@ Forschungsprototyp zur kameragestützten Unterstützung des Rüstprozesses einer
 > **Projektstatus:** Der assistierte Workflow ist der empfohlene und validierte Betriebsmodus. Die automatische kantenbasierte Konturerkennung ist als experimenteller Entwicklungspfad enthalten und für einen uneingeschränkt robusten Einsatz nicht ausreichend.
 
 <p align="center">
-  <img src="docs/media/waam_workflow.gif" alt="Ablauf der kameragestützten Rüsterfassung" width="850">
+  <img src="docs/media/graphical_abstract.png" alt="Ablauf der kameragestützten Rüsterfassung" width="850">
 </p>
 
 ## Zielsetzung
