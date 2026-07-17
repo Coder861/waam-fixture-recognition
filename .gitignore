@@ -1,0 +1,47 @@
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Python cache and build artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+build/
+dist/
+*.egg-info/
+
+# IDE and editor files
+.vscode/
+.idea/
+*.code-workspace
+
+# Operating-system files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Local runtime output
+/data.json
+/spannsituation_ortho.png
+/aufnahme_*.png
+/*.log
+
+# Locally generated camera calibrations
+*.tmp.npz
+*.npz
+
+# Temporary and backup files
+*.tmp
+*.bak
+*.swp
+*~
+~$*
+
+# Local Rhino backup/autosave files
+*.3dmbak
