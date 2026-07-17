@@ -634,6 +634,7 @@ def createSpanneisenMask(frame_shape):
                 f"Spanneisenmaske übersprungen: "
                 f"unbekannte ArUco ID {aruco_id}"
             )
+            continue
 
         poly_norm = clamp_def["poly_norm"]
         angle_deg = float(clamp["angle_z_deg"]) + float(clamp_def["angle_offset_deg"])
