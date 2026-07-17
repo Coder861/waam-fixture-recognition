@@ -7,7 +7,7 @@ Research prototype for camera-assisted setup of a Wire Arc Additive Manufacturin
 > **Project status:** The assisted contour workflow is the recommended and validated operating mode. The automatic edge-based contour detection is included as an experimental development path and is not sufficiently robust for unrestricted use.
 
 <p align="center">
-  <img src="docs/media/waam_workflow.gif" alt="WAAM setup-recognition workflow" width="850">
+  <img src="docs/media/graphical_abstract" alt="WAAM setup-recognition workflow" width="850">
 </p>
 
 ## Purpose
