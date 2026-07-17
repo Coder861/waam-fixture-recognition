@@ -93,13 +93,14 @@ display_image_h = 0
 plate_thickness = 0.0 # in Milimeter
 
 USE_TEST_IMAGE = False 
-TEST_IMAGE_PATH = Path(__file__).parent / "finaltest_aruco_spannsituation.png"
-#TEST_IMAGE_PATH = Path(__file__).parent / "autopipeline-testbilder" / "auto_schmale_platte.png"
+TEST_IMAGE_PATH = Path(__file__).parent / "examples" / "auto_platte_spanneisen.png"
 TEST_CALIB_PATH = Path(__file__).parent / "EMEET_SmartCam_Nova_4k_3840x2160p_20260607_173908.npz"
+#auto_highcontrastplatte_spanneisen.png
+#auto_leer.png
+#auto_platte_nospanneisen.png
+#auto_platte_spanneisen.png
+#auto_schmale_platte.png
 
-#finaltest_aruco_spannsituation.png
-#calibration_reference_marker.png
-#fastleereplatte.png
 TEST_CAMERA_NAME = "WAAM-Webcam-Testbild"
 #################### TEMP ###################
 
