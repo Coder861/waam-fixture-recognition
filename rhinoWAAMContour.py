@@ -251,6 +251,7 @@ def createRhinoGeometry(form, status_label):
                 "Spanneisen übersprungen: "
                 "keine Geometrie für ArUco ID " + str(aruco_id)
             )
+            continue
 
         # Wo der Mittelpunkt des Markers liegt
         center_x_mm = m_to_mm(clamp["X"])
