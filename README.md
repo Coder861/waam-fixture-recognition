@@ -2,6 +2,8 @@
 
 **English** | [Deutsch](README_DE.md)
 
+[![DOI](https://zenodo.org/badge/1299800773.svg)](https://doi.org/10.5281/zenodo.21441378)
+
 Research prototype for camera-assisted setup of a Wire Arc Additive Manufacturing (WAAM) cell. The software determines a usable substrate-plate area in work-object coordinates, detects marked clamps, and transfers the resulting geometry to Rhino for CAD/CAM planning.
 
 > **Project status:** The assisted contour workflow is the recommended and validated operating mode. The automatic edge-based contour detection is included as an experimental development path and is not sufficiently robust for unrestricted use.
