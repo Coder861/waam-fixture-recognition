@@ -133,7 +133,7 @@ Ein Beispiel im aktuellen Format befindet sich unter `examples/example_output.js
 | `requirements.txt`          | Externe Python-Abhängigkeiten                                                     |
 | `install_requirements.bat`  | Einrichtung und Installation der lokalen virtuellen Umgebung                      |
 | `icons/`                    | Für den GUI-Start erforderliche Symbole                                           |
-| `docs/media/`               | Medien der README einschließlich des Ablauf-GIFs                                  |
+| `media/`                    | Medien der README einschließlich der Prozessabbildung                             |
 | `examples/`                 | Kleine Beispieldaten ohne vertrauliche Produktionsinformationen                   |
 
 ## Bekannte Grenzen
