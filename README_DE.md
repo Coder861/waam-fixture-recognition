@@ -2,6 +2,8 @@
 
 [English](README.md) | **Deutsch**
 
+[![DOI](https://zenodo.org/badge/1299800773.svg)](https://doi.org/10.5281/zenodo.21441378)
+
 Forschungsprototyp zur kameragestützten Unterstützung des Rüstprozesses einer Wire-Arc-Additive-Manufacturing-Zelle (WAAM). Die Software bestimmt eine nutzbare Fläche auf der Substratplatte in Werkobjektkoordinaten, erkennt markierte Spanneisen und übergibt die erzeugten Geometrien an Rhino für die CAD/CAM-Planung.
 
 > **Projektstatus:** Der assistierte Workflow ist der empfohlene und validierte Betriebsmodus. Die automatische kantenbasierte Konturerkennung ist als experimenteller Entwicklungspfad enthalten und für einen uneingeschränkt robusten Einsatz nicht ausreichend.
