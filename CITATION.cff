@@ -25,7 +25,5 @@ keywords:
 repository-code: "https://github.com/Coder861/waam-fixture-recognition"
 license: GPL-3.0-only
 version: "1.0.0"
-
-# Add these fields after the GitHub release has been archived by Zenodo:
-# date-released: "YYYY-MM-DD"
-# doi: "10.5281/zenodo.XXXXXXX"
+date-released: "2026-07-19"
+doi: "10.5281/zenodo.21441379"
