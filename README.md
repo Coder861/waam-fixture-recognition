@@ -133,7 +133,7 @@ A current-format example is provided in `examples/example_output.json`.
 | `requirements.txt`          | External Python dependencies                                                      |
 | `install_requirements.bat`  | Creation and installation of the local virtual environment                        |
 | `icons/`                    | Required GUI icons                                                                |
-| `docs/media/`               | README media, including the workflow GIF                                          |
+| `media/`                    | README media, including the workflow picture                                      |
 | `examples/`                 | Small example data that do not contain confidential production information        |
 
 ## Known limitations
